@@ -1,0 +1,23 @@
+@"
+# Generated outputs
+logs/
+HTML reports/
+*.csv
+*.html
+
+# Large or third-party installers (use Releases or cloud storage)
+*.msi
+*.exe
+!DeploymentToolGUI.exe   
+
+# OS/IDE clutter
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/
+
+# Temp/backups
+*.tmp
+*.bak
+*.zip
+"@ | Set-Content -Encoding UTF8 .gitignore
