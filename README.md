@@ -11,21 +11,21 @@ _A lightweight PowerShell + WinForms utility to automate software deployment and
 ---
 
 ### 🔗 Quick Navigation
-[Overview](#overview) • [Features](#features) • [Tech Stack](#tech-stack) • [Getting Started](#getting-started) • [Run the GUI](#run-the-gui) • [CLI Usage](#cli-usage) • [Demo Video](#demo-video) • [Screenshots](#screenshots) • [Descriptions](#screenshot-descriptions) • [Planned Enhancements](#planned-enhancements) • [Developer](#developer) • [License](#license)
+[Overview](#overview) • [Features](#features) • [Tech Stack](#tech-stack) • [Getting Started](#getting-started) • [Run the GUI](#run-the-gui) • [Automation via CLI](#automation-via-cli) • [Demo Video](#demo-video) • [Screenshots](#screenshots) • [Descriptions](#screenshot-descriptions) • [Planned Enhancements](#planned-enhancements) • [Developer](#developer) • [License](#license)
 
 ---
 
 <a name="overview"></a>
 ## 🧠 Overview
 
-**Software Deployment Tool** streamlines software installation and removal for IT administrators.  
+**Software Deployment Tool** simplifies software installation and removal for IT administrators.  
 Choose **Install** to silently deploy `.msi` / `.exe` packages, or **Uninstall** to remove applications by **product name**.
 
-Each session automatically generates timestamped **HTML and CSV reports**, and optionally sends them via email — perfect for audit-ready, repeatable rollouts.
+Each deployment automatically generates timestamped **HTML and CSV reports**, and optionally emails them — perfect for **audit-ready, repeatable rollouts**.
 
 > 💡 Designed for reliability, visibility, and simplicity in system administration.
 
-Modern IT teams often spend hours manually managing deployments across many machines.  
+Modern IT teams often spend hours manually managing software rollouts across many devices.  
 This tool eliminates that complexity by automating every step — **reliably, visually, and fast**.
 
 ---
@@ -40,7 +40,7 @@ This tool eliminates that complexity by automating every step — **reliably, vi
 - 💻 **Control** everything through a GUI or command-line interface  
 - ⚙️ **Track exit codes** (handles 0, 3010, 1605, and more)  
 - 🔒 **Exclude** logs and reports via `.gitignore`  
-- 🔁 **Multi-target ready** (e.g. deploy to all hosts in `computers.txt`)
+- 🔁 **Multi-target ready** (e.g., deploy to all hosts in `computers.txt`)
 
 ---
 
@@ -70,7 +70,7 @@ cd SoftwareDeploymentTool
 Open `SendDeploymentEmail.ps1` and update the SMTP configuration.  
 Use a Gmail App Password or your internal SMTP relay credentials.
 
-> ⚠️ Never store real credentials in public repositories.
+> ⚠️ Avoid storing real credentials in public repositories.
 
 ### 3️⃣ Define Targets
 Edit `computers.txt` and list your machines (or use `localhost`):
@@ -102,35 +102,47 @@ After clicking **Start Deployment**, the tool runs your task and stores reports 
 
 ---
 
-<a name="cli-usage"></a>
-## 🧰 CLI Usage
+<a name="automation-via-cli"></a>
+## ⚙️ Automation via CLI
+
+You can run the tool directly from PowerShell for **scripting, scheduling, or remote automation** — without using the GUI.
 
 <details>
 <summary>💻 Click to view CLI examples</summary>
 
-**Install Example**
+### 🧩 Install Software
 ~~~powershell
 .\DeploySoftware.ps1 -Mode Install `
   -InstallerPaths "C:\Apps\Google Chrome.msi;C:\Apps\VLC.msi" `
-  -Computers localhost
+  -Computers "localhost;PC-02"
 ~~~
+Installs Google Chrome and VLC on multiple computers listed in the parameter.
 
-**Uninstall Example**
+---
+
+### 🧹 Uninstall Software
 ~~~powershell
 .\DeploySoftware.ps1 -Mode Uninstall `
   -InstallerPaths "VLC;Google Chrome" `
-  -Computers "PC-01;localhost"
+  -Computers "localhost;PC-02"
 ~~~
+Uninstalls programs by **product name** (no installer file needed).
 
-**Generate HTML Report Only**
+---
+
+### 🧾 Generate a Report
 ~~~powershell
 .\GenerateReport.ps1
 ~~~
+Creates a new HTML and CSV summary report from the last deployment.
 
-**Send Latest Report via Email**
+---
+
+### ✉️ Email the Latest Report
 ~~~powershell
 .\SendDeploymentEmail.ps1 -RecipientEmail you@example.com
 ~~~
+Emails the last generated report using your configured SMTP settings.
 
 </details>
 
@@ -141,7 +153,7 @@ After clicking **Start Deployment**, the tool runs your task and stores reports 
 
 [![Watch Demo](https://img.shields.io/badge/🎬%20Watch%20Demo%20Video-blue?style=for-the-badge)](https://github.com/MoustafaObari/SoftwareDeploymentTool/blob/main/Software%20deployment%20tool%20demo.mp4)
 
-> Demonstrates installation, uninstallation, and automated report emailing.
+> 🎞️ Recorded live on Windows 11 — includes installation, uninstallation, and automated email reporting.
 
 ---
 
