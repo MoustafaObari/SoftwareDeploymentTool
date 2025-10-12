@@ -11,7 +11,7 @@ _A lightweight PowerShell + WinForms utility to automate software deployment and
 ---
 
 ### 🔗 Quick Navigation
-[Overview](#overview) • [Features](#features) • [Tech Stack](#tech-stack) • [Getting Started](#getting-started) • [Run the GUI](#run-the-gui) • [Automation via CLI](#automation-via-cli) • [Demo Video](#demo-video) • [Screenshots](#screenshots) • [Descriptions](#screenshot-descriptions) • [Planned Enhancements](#planned-enhancements) • [Developer](#developer) • [License](#license)
+[Overview](#overview) • [Use Cases](#use-cases) • [Features](#features) • [Tech Stack](#tech-stack) • [Requirements](#requirements) • [Getting Started](#getting-started) • [Run the GUI](#run-the-gui) • [Automation via CLI](#automation-via-cli) • [Demo Video](#demo-video) • [Screenshots](#screenshots) • [Descriptions](#screenshot-descriptions) • [Planned Enhancements](#planned-enhancements) • [Developer](#developer) • [License](#license)
 
 ---
 
@@ -27,6 +27,16 @@ Each deployment automatically generates timestamped **HTML and CSV reports**, an
 
 Modern IT teams often spend hours manually managing software rollouts across many devices.  
 This tool eliminates that complexity by automating every step — **reliably, visually, and fast**.
+
+---
+
+<a name="use-cases"></a>
+## 💼 Ideal Use Cases
+
+- 🖥️ **System Administrators** managing enterprise-wide installations or software cleanups  
+- 🧰 **IT Support Teams** deploying tools across multiple endpoints  
+- 🧪 **Developers & QA Engineers** testing installer packages in lab environments  
+- 🏢 **Organizations** needing repeatable, reportable deployments for compliance or audits  
 
 ---
 
@@ -54,6 +64,18 @@ This tool eliminates that complexity by automating every step — **reliably, vi
 | Reporting | HTML + CSS |
 | Email | SMTP |
 | Logging | CSV + HTML (auto-timestamped) |
+
+---
+
+<a name="requirements"></a>
+## 📋 Requirements
+
+| Component | Minimum Version / Notes |
+|-----------|--------------------------|
+| PowerShell | 5.1 or later |
+| Windows OS | Windows 10 / Server 2016 or newer |
+| Network | SMTP access (for email notifications) |
+| Permissions | Local Administrator rights for installs/uninstalls |
 
 ---
 
@@ -188,11 +210,11 @@ Emails the last generated report using your configured SMTP settings.
 | 3 | `03_Select-Installers.png` | Multiple installers selected for deployment |
 | 4 | `04_Ready-With-Email.png` | Email recipient configured and ready to deploy |
 | 5 | `05_Start-Deployment.png` | Deployment process running live |
-| 6 | `06_Install-Run-And-Success.png` | Completed install summary |
+| 6 | `06_Install-Run-And-Success.png` | Completed installation summary |
 | 7 | `07_Uninstall-Run-And-Success.png` | Successful uninstall confirmation |
 | 8 | `08_DeployLog-CSV.png` | CSV log showing timestamps, results, and targets |
-| 9 | `09_HTML-Report-Install.png` | HTML report (install results) |
-| 10 | `10_HTML-Report-Uninstall.png` | HTML report (uninstall results) |
+| 9 | `09_HTML-Report-Install.png` | HTML report for installed applications |
+| 10 | `10_HTML-Report-Uninstall.png` | HTML report for uninstalled applications |
 | 11 | `11_Email-Notification.png` | Email notification with attached reports |
 
 ---
@@ -256,5 +278,10 @@ SOFTWARE.
 ---
 
 > 💬 “Shipping software to many machines shouldn’t be scary — with this tool, it’s clear, auditable, and fast.”
+
+---
+
+🧩 Built with ❤️ by [Moustafa Obari](https://github.com/MoustafaObari)  
+💬 Feedback and contributions are always welcome!
 
 [⬆ Back to Top](#top)
