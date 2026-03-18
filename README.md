@@ -40,6 +40,7 @@
 </p>
 
 ---
+<a id="overview"></a>
 
 ## 🧠 Overview
 
@@ -54,6 +55,7 @@ It provides:
 * **Hybrid Control:** Use the interactive **GUI** for manual tasks or the **CLI** for automated pipelines.
 
 ---
+<a id="use-cases"></a>
 
 ## 💼 Ideal Use Cases
 
@@ -63,6 +65,7 @@ It provides:
 * 🏢 **Compliance Officers** needing repeatable, reportable deployment logs.
 
 ---
+<a id="Features"></a>
 
 ## ✨ Features
 
@@ -74,6 +77,7 @@ It provides:
 ✅ **CLI Automation:** Perfect for Task Scheduler or CI/CD pipelines.
 
 ---
+<a id="tech-stack"></a>
 
 ## 💻 Tech Stack
 
@@ -86,6 +90,7 @@ It provides:
 | **Communication** | SMTP (Email Delivery) |
 
 ---
+<a id="getting-started"></a>
 
 ## ⚙️ Getting Started
 
@@ -107,6 +112,7 @@ Server-05
 ```
 
 ---
+<a id="run-the-gui"></a>
 
 ## 🪟 Usage Modes
 
